@@ -65,7 +65,7 @@ func checkForDB() {
 		exitGracefully(errors.New("no database connection provided in .env"))
 	}
 
-	if !fileExists(cel.RootPath + "/config/database.yml"){
+	if !fileExists(cel.RootPath + "/config/database.yml") {
 		exitGracefully(errors.New("config/database.yml does not exist"))
 	}
 }
@@ -74,8 +74,8 @@ func showHelp() {
 	color.Yellow(`Available commands:
 
 	help                           - show the help commands
-    down                           - put the server into maintenance mode
-    up                             - take the server out of maintenance mode
+	down                           - put the server into maintenance mode
+	up                             - take the server out of maintenance mode
 	version                        - print application version
 	migrate                        - runs all up migrations that have not been run previously
 	migrate down                   - reverses the most recent migration
